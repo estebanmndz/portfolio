@@ -1,156 +1,191 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Esteban Méndez | Cloud Engineer</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Esteban Méndez | Cloud Engineer</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<style>
+:root {
+  --bg: #0b1220;
+  --card: #111827;
+  --accent: #3b82f6;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+}
 
-    body {
-      font-family: 'Inter', sans-serif;
-      background: #0f172a;
-      color: #e2e8f0;
-      line-height: 1.6;
-    }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    header {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background: linear-gradient(135deg, #1e3a8a, #6366f1);
-      text-align: center;
-    }
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
 
-    header h1 {
-      font-size: 3rem;
-    }
+/* NAV */
+nav {
+  position: fixed;
+  width: 100%;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  backdrop-filter: blur(10px);
+  background: rgba(11,18,32,0.7);
+}
 
-    header p {
-      margin-top: 10px;
-      font-size: 1.3rem;
-      opacity: 0.9;
-    }
+nav a {
+  color: var(--muted);
+  text-decoration: none;
+  margin-left: 20px;
+  transition: 0.3s;
+}
 
-    .btn {
-      margin-top: 20px;
-      padding: 12px 20px;
-      background: #22c55e;
-      color: black;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-      transition: 0.3s;
-    }
+nav a:hover {
+  color: white;
+}
 
-    .btn:hover {
-      background: #16a34a;
-    }
+/* HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
 
-    section {
-      padding: 60px 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 600;
+}
 
-    h2 {
-      margin-bottom: 20px;
-      border-left: 4px solid #22c55e;
-      padding-left: 10px;
-    }
+.hero span {
+  color: var(--accent);
+}
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
+.hero p {
+  margin-top: 15px;
+  color: var(--muted);
+}
 
-    .card {
-      background: #1e293b;
-      padding: 20px;
-      border-radius: 12px;
-      transition: 0.3s;
-    }
+.btn {
+  margin-top: 25px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  background: var(--accent);
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
 
-    .card:hover {
-      transform: translateY(-5px);
-      background: #334155;
-    }
+.btn:hover {
+  transform: translateY(-2px);
+}
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #020617;
-      font-size: 0.9rem;
-      opacity: 0.7;
-    }
-  </style>
+/* SECTIONS */
+section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 80px 20px;
+}
+
+h2 {
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+}
+
+/* CARDS */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: var(--card);
+  padding: 20px;
+  border-radius: 12px;
+  transition: 0.3s;
+  border: 1px solid transparent;
+}
+
+.card:hover {
+  border-color: var(--accent);
+  transform: translateY(-5px);
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 30px;
+  color: var(--muted);
+}
+</style>
 </head>
 
 <body>
 
-<header>
-  <h1>Esteban Méndez</h1>
-  <p>Cloud Engineer en progreso ☁️ | Azure | Terraform | Linux</p>
-  <a href="https://github.com/estebanmndz" class="btn">Ver GitHub</a>
-</header>
+<nav>
+  <div><strong>Esteban</strong></div>
+  <div>
+    <a href="#about">Sobre mí</a>
+    <a href="#projects">Proyectos</a>
+    <a href="#contact">Contacto</a>
+  </div>
+</nav>
 
-<section>
-  <h2>🚀 Sobre mí</h2>
+<div class="hero">
+  <h1>Esteban <span>Méndez</span></h1>
+  <p>Cloud Engineer en progreso — Azure, Terraform, Linux</p>
+  <a href="https://github.com/estebanmndz" class="btn">Ver GitHub</a>
+</div>
+
+<section id="about">
+  <h2>Sobre mí</h2>
   <p>
-    Técnico de sistemas con experiencia en entornos Linux y operaciones IT. Actualmente en transición hacia Cloud Engineering,
-    especializándome en Azure, infraestructura como código (Terraform) y automatización.
+    Técnico de sistemas en transición a Cloud Engineer. Actualmente desarrollando
+    proyectos en Azure y automatización con Terraform. Enfocado en construir
+    infraestructura real y escalable.
   </p>
 </section>
 
-<section>
-  <h2>🛠️ Skills</h2>
-  <div class="grid">
-    <div class="card">Azure (AZ-900 / AZ-104)</div>
-    <div class="card">Terraform (IaC)</div>
-    <div class="card">Linux & Bash</div>
-    <div class="card">PowerShell</div>
-    <div class="card">Networking</div>
-    <div class="card">Git & GitHub</div>
-  </div>
-</section>
-
-<section>
-  <h2>📂 Proyectos</h2>
+<section id="projects">
+  <h2>Proyectos</h2>
   <div class="grid">
 
     <div class="card">
-      <h3>Azure Lab</h3>
-      <p>Infraestructura con VNet, subnets, NSG y máquinas virtuales.</p>
-      <a href="https://github.com/estebanmndz" class="btn">Ver</a>
+      <h3>Azure Infrastructure Lab</h3>
+      <p>VNet, subnets, NSG y máquinas virtuales desplegadas en Azure.</p>
     </div>
 
     <div class="card">
       <h3>Terraform Deployment</h3>
-      <p>Despliegue automatizado de recursos en Azure con Terraform.</p>
-      <a href="https://github.com/estebanmndz" class="btn">Ver</a>
+      <p>Infraestructura como código para despliegue automático.</p>
+    </div>
+
+    <div class="card">
+      <h3>Automation Scripts</h3>
+      <p>Scripts en Bash y PowerShell para automatización de tareas.</p>
     </div>
 
   </div>
 </section>
 
-<section>
-  <h2>📬 Contacto</h2>
+<section id="contact">
+  <h2>Contacto</h2>
   <p>Email: mendezesteban1804@gmail.com</p>
   <p>GitHub: github.com/estebanmndz</p>
 </section>
 
 <footer>
-  © 2026 Esteban Méndez | Cloud Journey 🚀
+  © 2026 Esteban Méndez — Cloud Portfolio
 </footer>
 
 </body>
