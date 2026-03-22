@@ -16,17 +16,12 @@
   --muted: #9ca3af;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
   font-family: 'Inter', sans-serif;
   background: var(--bg);
   color: var(--text);
-  line-height: 1.6;
 }
 
 /* NAV */
@@ -42,14 +37,11 @@ nav {
 
 nav a {
   color: var(--muted);
-  text-decoration: none;
   margin-left: 20px;
-  transition: 0.3s;
+  text-decoration: none;
 }
 
-nav a:hover {
-  color: white;
-}
+nav a:hover { color: white; }
 
 /* HERO */
 .hero {
@@ -63,30 +55,38 @@ nav a:hover {
 
 .hero h1 {
   font-size: 3.5rem;
-  font-weight: 600;
 }
 
-.hero span {
-  color: var(--accent);
-}
+.hero span { color: var(--accent); }
 
 .hero p {
   margin-top: 15px;
   color: var(--muted);
+  max-width: 600px;
+}
+
+.buttons {
+  margin-top: 25px;
+  display: flex;
+  gap: 15px;
 }
 
 .btn {
-  margin-top: 25px;
   padding: 12px 20px;
   border-radius: 8px;
   background: var(--accent);
-  text-decoration: none;
   color: white;
+  text-decoration: none;
   transition: 0.3s;
 }
 
+.btn.secondary {
+  background: transparent;
+  border: 1px solid var(--accent);
+}
+
 .btn:hover {
-  transform: translateY(-2px);
+  transform: translateY(-3px);
 }
 
 /* SECTIONS */
@@ -96,29 +96,36 @@ section {
   padding: 80px 20px;
 }
 
-h2 {
-  margin-bottom: 25px;
-  font-size: 1.8rem;
-}
+h2 { margin-bottom: 25px; }
 
-/* CARDS */
+/* GRID */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
 }
 
+/* CARD */
 .card {
   background: var(--card);
   padding: 20px;
   border-radius: 12px;
   transition: 0.3s;
-  border: 1px solid transparent;
 }
 
 .card:hover {
-  border-color: var(--accent);
-  transform: translateY(-5px);
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+/* SKILLS */
+.skills span {
+  display: inline-block;
+  background: #1f2937;
+  padding: 8px 12px;
+  margin: 5px;
+  border-radius: 6px;
+  font-size: 0.9rem;
 }
 
 /* FOOTER */
@@ -143,38 +150,51 @@ footer {
 
 <div class="hero">
   <h1>Esteban <span>Méndez</span></h1>
-  <p>Cloud Engineer en progreso — Azure, Terraform, Linux</p>
-  <a href="https://github.com/estebanmndz" class="btn">Ver GitHub</a>
+  <p>Cloud Engineer en progreso especializado en Azure, Terraform e infraestructura como código</p>
+
+  <div class="buttons">
+    <a href="https://github.com/estebanmndz" class="btn">GitHub</a>
+    <a href="#contact" class="btn secondary">Contacto</a>
+  </div>
 </div>
 
 <section id="about">
   <h2>Sobre mí</h2>
   <p>
-    Técnico de sistemas en transición a Cloud Engineer. Actualmente desarrollando
-    proyectos en Azure y automatización con Terraform. Enfocado en construir
-    infraestructura real y escalable.
+    Administrador de sistemas en transición a Cloud Engineer. Construyendo proyectos reales en Azure y automatización con Terraform.
   </p>
+
+  <div class="skills">
+    <span>Azure</span>
+    <span>Terraform</span>
+    <span>Linux</span>
+    <span>Bash</span>
+    <span>PowerShell</span>
+    <span>Networking</span>
+  </div>
 </section>
 
 <section id="projects">
   <h2>Proyectos</h2>
-  <div class="grid">
 
+  <div class="grid">
     <div class="card">
-      <h3>Azure Infrastructure Lab</h3>
-      <p>VNet, subnets, NSG y máquinas virtuales desplegadas en Azure.</p>
+      <h3>Azure Lab</h3>
+      <p>Infraestructura completa con VNet, NSG y máquinas virtuales.</p>
+      <a href="https://github.com/estebanmndz" class="btn">Ver código</a>
     </div>
 
     <div class="card">
-      <h3>Terraform Deployment</h3>
-      <p>Infraestructura como código para despliegue automático.</p>
+      <h3>Terraform Infra</h3>
+      <p>Despliegue automatizado en Azure usando Infrastructure as Code.</p>
+      <a href="https://github.com/estebanmndz" class="btn">Ver código</a>
     </div>
 
     <div class="card">
       <h3>Automation Scripts</h3>
-      <p>Scripts en Bash y PowerShell para automatización de tareas.</p>
+      <p>Scripts para automatizar tareas de sistemas y cloud.</p>
+      <a href="https://github.com/estebanmndz" class="btn">Ver código</a>
     </div>
-
   </div>
 </section>
 
@@ -190,5 +210,3 @@ footer {
 
 </body>
 </html>
-
-
