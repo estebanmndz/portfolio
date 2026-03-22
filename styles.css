@@ -144,6 +144,13 @@ footer {
   color: var(--muted);
 }
 
+/* BANDERA */
+.flag-inline {
+  width: 18px;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
 /* RESPONSIVE */
 @media (min-width: 768px) {
   .grid {
