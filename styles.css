@@ -171,10 +171,18 @@ footer {
 .github-btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
 }
 
 .icon {
   width: 16px;
   height: 16px;
+  display: block;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
