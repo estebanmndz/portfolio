@@ -53,6 +53,7 @@ El dominio raíz no soporta CNAME en DNS estándar.
 ## 🧪 Validaciones
 
 nslookup estebanmndz.dev
+
 nslookup www.estebanmndz.dev
 
 ---
