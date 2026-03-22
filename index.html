@@ -26,25 +26,26 @@
 <!-- HERO -->
 <section class="hero">
   <div class="container">
-    <h1>
+    <h1 class="fade-in">
       Esteban Méndez <br>
       <span>Cloud Engineer</span>
     </h1>
 
-    <p class="highlight">
+    <p class="highlight fade-in fade-delay-1">
       Azure · Terraform · Automatización
     </p>
 
-    <p class="description">
+    <p class="description fade-in fade-delay-2">
       Administrador de sistemas evolucionando a cloud.
       Construyendo infraestructura real en Azure.
     </p>
 
-    <div class="buttons">
-      <a href="https://github.com/estebanmndz" target="_blank" class="btn github-btn">
-  <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" class="icon">
-  GitHub
-</a>
+    <div class="buttons fade-in fade-delay-3">
+      <a href="https://github.com/estebanmndz" target="_blank" class="btn">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" class="icon">
+        GitHub
+      </a>
+
       <a href="#projects" class="btn secondary">Ver proyectos</a>
     </div>
   </div>
@@ -64,6 +65,22 @@
       Desarrollo proyectos reales utilizando Terraform, redes virtuales y máquinas virtuales,
       aplicando buenas prácticas de arquitectura cloud.
     </p>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="container">
+    <h2>Skills</h2>
+
+    <div class="skills">
+      <span>Azure</span>
+      <span>Terraform</span>
+      <span>Linux</span>
+      <span>Bash</span>
+      <span>PowerShell</span>
+      <span>Networking</span>
+    </div>
   </div>
 </section>
 
@@ -107,8 +124,20 @@
 <!-- FOOTER -->
 <footer>
   © 2026 Esteban Méndez · Cloud Engineer · 
-  <img src="https://flagcdn.com/w20/es.png" alt="España" class="flag-inline">
+  <img src="https://flagcdn.com/w20/es.png" class="flag-inline">
 </footer>
+
+<!-- JS NAV -->
+<script>
+window.addEventListener("scroll", () => {
+  const nav = document.querySelector("nav");
+  if (window.scrollY > 20) {
+    nav.classList.add("scrolled");
+  } else {
+    nav.classList.remove("scrolled");
+  }
+});
+</script>
 
 </body>
 </html>
