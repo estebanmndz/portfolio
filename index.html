@@ -5,196 +5,55 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Esteban Méndez | Cloud Engineer</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="https://cdn-icons-png.flaticon.com/512/25/25231.png">
 
-<style>
-:root {
-  --bg: #020617;
-  --card: #0f172a;
-  --accent: #38bdf8;
-  --text: #e2e8f0;
-  --muted: #64748b;
-}
-
-body {
-  font-family: 'Inter', sans-serif;
-  background: radial-gradient(circle at top, #020617, #000);
-  color: var(--text);
-  margin: 0;
-}
-
-/* NAV */
-nav {
-  position: fixed;
-  width: 100%;
-  padding: 20px 60px;
-  display: flex;
-  justify-content: space-between;
-  background: rgba(2,6,23,0.8);
-  backdrop-filter: blur(10px);
-}
-
-nav a {
-  color: var(--muted);
-  margin-left: 20px;
-  text-decoration: none;
-}
-
-nav a:hover {
-  color: white;
-}
-
-/* HERO */
-.hero {
-  height: 90vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0 60px;
-}
-
-.hero h1 {
-  font-size: 4rem;
-  margin-bottom: 10px;
-}
-
-.hero span {
-  color: var(--accent);
-}
-
-.hero p {
-  max-width: 600px;
-  color: var(--muted);
-  font-size: 1.2rem;
-}
-
-.buttons {
-  margin-top: 25px;
-}
-
-.btn {
-  padding: 12px 18px;
-  margin-right: 10px;
-  border-radius: 6px;
-  background: var(--accent);
-  color: black;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.btn.secondary {
-  background: transparent;
-  border: 1px solid var(--accent);
-  color: var(--accent);
-}
-
-/* SECTIONS */
-section {
-  padding: 80px 60px;
-}
-
-h2 {
-  margin-bottom: 20px;
-}
-
-/* GRID */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 25px;
-}
-
-/* CARD */
-.card {
-  background: var(--card);
-  padding: 25px;
-  border-radius: 10px;
-  border: 1px solid #1e293b;
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-6px);
-  border-color: var(--accent);
-}
-
-/* PROJECT TAG */
-.tag {
-  display: inline-block;
-  font-size: 0.8rem;
-  background: #020617;
-  border: 1px solid #1e293b;
-  padding: 4px 8px;
-  margin-top: 10px;
-  margin-right: 5px;
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 40px;
-  color: var(--muted);
-}
-</style>
 </head>
 
 <body>
 
 <nav>
-  <div><strong>estebanmndz</strong></div>
-  <div>
+  <div class="logo">estebanmndz</div>
+  <div class="menu">
     <a href="#projects">Proyectos</a>
     <a href="#contact">Contacto</a>
   </div>
 </nav>
 
-<div class="hero">
-  <h1>Cloud Engineer<br><span>en construcción</span></h1>
-
-  <p>
-    Administrador de sistemas evolucionando a cloud. Construyendo infraestructura real en Azure con Terraform, automatización y networking.
-  </p>
+<section class="hero">
+  <h1>Cloud Engineer <span>en construcción</span></h1>
+  <p>Administrador de sistemas evolucionando a cloud. Construyendo infraestructura real en Azure con Terraform.</p>
 
   <div class="buttons">
     <a href="https://github.com/estebanmndz" class="btn">GitHub</a>
     <a href="#projects" class="btn secondary">Ver proyectos</a>
   </div>
-</div>
+</section>
 
 <section id="projects">
   <h2>Proyectos</h2>
 
   <div class="grid">
-
     <div class="card">
-      <h3>Azure Infrastructure Lab</h3>
-      <p>Despliegue completo de infraestructura en Azure con VNet, NSG y máquinas virtuales.</p>
-      <div class="tag">Azure</div>
-      <div class="tag">Networking</div>
-      <div class="tag">VM</div>
+      <h3>Azure Lab</h3>
+      <p>Infraestructura en Azure con VNet, NSG y VMs.</p>
     </div>
 
     <div class="card">
-      <h3>Terraform Deployment</h3>
-      <p>Automatización de infraestructura usando Terraform siguiendo buenas prácticas.</p>
-      <div class="tag">Terraform</div>
-      <div class="tag">IaC</div>
+      <h3>Terraform</h3>
+      <p>Infraestructura como código.</p>
     </div>
 
     <div class="card">
-      <h3>Automation Scripts</h3>
-      <p>Scripts en Bash y PowerShell para automatizar tareas de sistemas y cloud.</p>
-      <div class="tag">Bash</div>
-      <div class="tag">PowerShell</div>
+      <h3>Automation</h3>
+      <p>Scripts en Bash y PowerShell.</p>
     </div>
-
   </div>
 </section>
 
 <section id="contact">
   <h2>Contacto</h2>
   <p>Email: mendezesteban1804@gmail.com</p>
-  <p>GitHub: github.com/estebanmndz</p>
 </section>
 
 <footer>
