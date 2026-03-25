@@ -6,7 +6,6 @@
 <title>Esteban Méndez | Cloud Engineer</title>
 
 <link rel="stylesheet" href="styles.css">
-<link rel="icon" href="https://cdn-icons-png.flaticon.com/512/25/25231.png">
 </head>
 
 <body>
@@ -26,28 +25,32 @@
 <!-- HERO -->
 <section class="hero">
   <div class="container">
-    <h1 class="fade-in">
+
+    <h1>
       Esteban Méndez <br>
       <span>Cloud Engineer</span>
     </h1>
 
-    <p class="highlight fade-in fade-delay-1">
-      Azure · Terraform · Automatización
+    <p class="highlight">
+      Azure · Terraform · Automatización · Linux
     </p>
 
-    <p class="description fade-in fade-delay-2">
-      Administrador de sistemas evolucionando a cloud.
-      Construyendo infraestructura real en Azure.
+    <p class="description">
+      Diseño y automatizo infraestructura en Azure con foco en redes, seguridad y despliegues reproducibles.
     </p>
 
-    <div class="buttons fade-in fade-delay-3">
+    <p class="description">
+      Experiencia en entornos Linux, automatización con PowerShell/Bash y operaciones cloud orientadas a escenarios reales.
+    </p>
+
+    <div class="buttons">
       <a href="https://github.com/estebanmndz" target="_blank" class="btn">
-        <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" class="icon">
         GitHub
       </a>
 
       <a href="#projects" class="btn secondary">Ver proyectos</a>
     </div>
+
   </div>
 </section>
 
@@ -58,12 +61,12 @@
 
     <p>
       Técnico de sistemas con experiencia en entornos Linux y operación de infraestructura.
-      Actualmente enfocado en cloud computing y despliegues en Azure.
+      Especializado en automatización y despliegue de recursos en Azure, trabajando con redes virtuales, seguridad e identidad.
     </p>
 
     <p>
-      Desarrollo proyectos reales utilizando Terraform, redes virtuales y máquinas virtuales,
-      aplicando buenas prácticas de arquitectura cloud.
+      Desarrollo proyectos que simulan escenarios reales: provisión de infraestructura, optimización de costes, automatización de tareas,
+      backups, monitorización y hardening de sistemas.
     </p>
   </div>
 </section>
@@ -71,14 +74,15 @@
 <!-- SKILLS -->
 <section id="skills">
   <div class="container">
-    <h2>Skills</h2>
+    <h2>Stack técnico</h2>
 
     <div class="skills">
       <span>Azure</span>
       <span>Terraform</span>
-      <span>Linux</span>
-      <span>Bash</span>
       <span>PowerShell</span>
+      <span>Bash</span>
+      <span>Linux</span>
+      <span>Docker</span>
       <span>Networking</span>
     </div>
   </div>
@@ -90,23 +94,43 @@
     <h2>Proyectos</h2>
 
     <div class="grid">
+
       <div class="card">
-        <h3>Azure Lab</h3>
-        <p>Infraestructura en Azure con VNet, NSG, VMs y monitorización.</p>
-        <a href="#" class="btn secondary">Ver código</a>
+        <h3>Azure VM Deployment</h3>
+        <p>Despliegue completo de infraestructura en Azure con VNet, NSG, VM y buenas prácticas cloud.</p>
+        <a href="https://github.com/estebanmndz/azure-create-vm" target="_blank" class="btn secondary">Ver código</a>
       </div>
 
       <div class="card">
-        <h3>Terraform Infra</h3>
-        <p>Despliegue automatizado en Azure con Infrastructure as Code.</p>
-        <a href="#" class="btn secondary">Ver código</a>
+        <h3>Azure Orphan Resource Cleaner</h3>
+        <p>Limpieza automática de recursos huérfanos orientada a optimización de costes (FinOps).</p>
+        <a href="https://github.com/estebanmndz/azure-clean-orphans" target="_blank" class="btn secondary">Ver código</a>
       </div>
 
       <div class="card">
-        <h3>Automation Scripts</h3>
-        <p>Scripts en Bash y PowerShell para automatizar tareas.</p>
-        <a href="#" class="btn secondary">Ver código</a>
+        <h3>Backup a Azure Blob</h3>
+        <p>Automatización de backups hacia Azure Blob Storage con AzCopy.</p>
+        <a href="https://github.com/estebanmndz/azure-backup-blob" target="_blank" class="btn secondary">Ver código</a>
       </div>
+
+      <div class="card">
+        <h3>Docker Auto Deploy</h3>
+        <p>Despliegue automático de contenedores con Docker y Docker Compose.</p>
+        <a href="https://github.com/estebanmndz/docker-autodeploy" target="_blank" class="btn secondary">Ver código</a>
+      </div>
+
+      <div class="card">
+        <h3>Linux Hardening</h3>
+        <p>Seguridad en sistemas Linux con UFW, Fail2Ban y configuración SSH.</p>
+        <a href="https://github.com/estebanmndz/linux-hardening" target="_blank" class="btn secondary">Ver código</a>
+      </div>
+
+      <div class="card">
+        <h3>Linux Monitoring</h3>
+        <p>Monitorización básica con métricas de CPU, RAM y disco.</p>
+        <a href="https://github.com/estebanmndz/linux-monitoring" target="_blank" class="btn secondary">Ver código</a>
+      </div>
+
     </div>
   </div>
 </section>
@@ -123,21 +147,8 @@
 
 <!-- FOOTER -->
 <footer>
-  © 2026 Esteban Méndez · Cloud Engineer · 
-  <img src="https://flagcdn.com/w20/es.png" class="flag-inline">
+  © 2026 Esteban Méndez · Cloud Engineer
 </footer>
-
-<!-- JS NAV -->
-<script>
-window.addEventListener("scroll", () => {
-  const nav = document.querySelector("nav");
-  if (window.scrollY > 20) {
-    nav.classList.add("scrolled");
-  } else {
-    nav.classList.remove("scrolled");
-  }
-});
-</script>
 
 </body>
 </html>
