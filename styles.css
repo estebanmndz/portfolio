@@ -13,17 +13,19 @@ body {
   margin: 0;
 }
 
+/* CONTAINER */
 .container {
   max-width: 1100px;
   margin: auto;
   padding: 0 20px;
 }
 
+/* NAV */
 nav {
   position: fixed;
   width: 100%;
   top: 0;
-  background: rgba(2,6,23,0.9);
+  background: rgba(2,6,23,0.8);
   backdrop-filter: blur(10px);
 }
 
@@ -34,14 +36,9 @@ nav {
   align-items: center;
 }
 
-.menu a {
-  margin-left: 20px;
-  color: var(--muted);
-  text-decoration: none;
-}
-
+/* HERO */
 .hero {
-  padding: 180px 0 120px;
+  padding: 160px 0 100px;
 }
 
 .hero h1 {
@@ -54,7 +51,6 @@ nav {
 
 .highlight {
   color: var(--accent);
-  margin: 10px 0;
 }
 
 .description {
@@ -62,14 +58,15 @@ nav {
   max-width: 500px;
 }
 
+/* BUTTONS */
 .buttons {
-  margin-top: 25px;
+  margin-top: 20px;
   display: flex;
   gap: 10px;
 }
 
 .btn {
-  padding: 10px 18px;
+  padding: 10px 16px;
   border-radius: 8px;
   text-decoration: none;
   background: var(--accent);
@@ -82,39 +79,78 @@ nav {
   color: var(--accent);
 }
 
-section {
-  padding: 90px 0;
-}
-
-.skills span {
-  border: 1px solid var(--accent);
-  padding: 6px 12px;
-  border-radius: 20px;
-  margin: 5px;
-  display: inline-block;
-}
-
+/* GRID */
 .grid {
   display: grid;
   gap: 25px;
 }
 
+/* CARDS PRO */
 .card {
-  background: var(--card);
-  padding: 20px;
-  border-radius: 10px;
+  position: relative;
+  display: block;
+  text-decoration: none;
+  color: var(--text);
+
+  padding: 25px;
+  border-radius: 16px;
+
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(56,189,248,0.15);
+
+  transition: all 0.3s ease;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+
+  background: radial-gradient(circle at top left, rgba(56,189,248,0.15), transparent 60%);
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(56,189,248,0.4);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+}
+
+.card h3 {
+  margin: 10px 0;
 }
 
 .card p {
   color: var(--muted);
+  font-size: 0.95rem;
 }
 
+/* TAG */
+.tag {
+  font-size: 0.75rem;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  padding: 3px 8px;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+/* FOOTER */
 footer {
   text-align: center;
-  padding: 30px;
+  padding: 40px;
   color: var(--muted);
 }
 
+/* RESPONSIVE */
 @media (min-width: 768px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
