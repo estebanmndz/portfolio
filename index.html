@@ -35,7 +35,7 @@
       <span>Cloud Engineer</span>
     </h1>
 
-    <p class="highlight">
+    <p class="highlight" data-i18n="stack">
       Azure · Terraform · Automatización · Linux
     </p>
 
@@ -156,6 +156,7 @@ const translations = {
     nav_contact: "Contacto",
     title: "Esteban Méndez <br><span>Cloud Engineer</span>",
     description: "Diseño y automatizo infraestructura en Azure con foco en redes, seguridad y despliegues reproducibles.",
+    stack: "Azure · Terraform · Automatización · Linux",
     btn_projects: "Ver proyectos",
     about_title: "Sobre mí",
     about_1: "Técnico de sistemas con experiencia en entornos Linux y operación de infraestructura. Actualmente enfocado en Cloud Engineering.",
@@ -176,6 +177,7 @@ const translations = {
     nav_contact: "Contact",
     title: "Esteban Méndez <br><span>Cloud Engineer</span>",
     description: "I design and automate Azure infrastructure focusing on networking, security, and scalable deployments.",
+    stack: "Azure · Terraform · Automation · Linux",
     btn_projects: "View projects",
     about_title: "About me",
     about_1: "Systems technician with experience in Linux environments and infrastructure operations, currently focused on Cloud Engineering.",
@@ -194,13 +196,21 @@ const translations = {
 
 function setLang(lang) {
   document.documentElement.lang = lang;
+
   document.querySelectorAll("[data-i18n]").forEach(el => {
     const key = el.getAttribute("data-i18n");
     if (translations[lang][key]) {
       el.innerHTML = translations[lang][key];
     }
   });
+
+  localStorage.setItem("lang", lang);
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const savedLang = localStorage.getItem("lang") || "es";
+  setLang(savedLang);
+});
 </script>
 
 </body>
