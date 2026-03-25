@@ -29,7 +29,7 @@ body {
 }
 
 /* =========================
-   SCROLL FIX
+   SCROLL
 ========================= */
 html {
   scroll-behavior: smooth;
@@ -45,10 +45,6 @@ section {
 a {
   color: inherit;
   text-decoration: none;
-}
-
-a:visited {
-  color: inherit;
 }
 
 /* =========================
@@ -83,14 +79,42 @@ nav {
   font-weight: 600;
 }
 
+/* MENU */
+.menu {
+  display: flex;
+  align-items: center;
+}
+
 .menu a {
   margin-left: 20px;
   color: var(--muted);
   font-size: 0.9rem;
+  transition: 0.2s;
 }
 
 .menu a:hover {
   color: var(--text);
+}
+
+/* LANGUAGE SWITCH */
+.lang-switch {
+  display: flex;
+  gap: 6px;
+}
+
+.lang-switch button {
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.7rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.lang-switch button:hover {
+  background: rgba(56,189,248,0.1);
 }
 
 /* =========================
@@ -140,12 +164,22 @@ nav {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  transition: 0.25s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(56,189,248,0.3);
 }
 
 .btn.secondary {
   background: transparent;
   border: 1px solid var(--accent);
   color: var(--accent);
+}
+
+.btn.secondary:hover {
+  background: rgba(56,189,248,0.1);
 }
 
 /* =========================
@@ -157,23 +191,6 @@ section {
 
 h2 {
   margin-bottom: 30px;
-}
-
-/* =========================
-   SKILLS
-========================= */
-.skills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.skills span {
-  background: rgba(56,189,248,0.1);
-  border: 1px solid var(--accent);
-  padding: 6px 12px;
-  border-radius: 20px;
-  color: var(--accent);
 }
 
 /* =========================
@@ -253,9 +270,8 @@ footer {
 }
 
 /* =========================
-   ABOUT (ARREGLADO)
+   ABOUT
 ========================= */
-
 #about p {
   margin-bottom: 14px;
   max-width: 700px;
@@ -282,17 +298,13 @@ footer {
 
   .nav-inner {
     flex-direction: column;
+    gap: 8px;
     height: auto;
     padding: 10px 0;
   }
 
   .menu {
-    margin-top: 8px;
-  }
-
-  .menu a {
-    margin: 0 10px;
-    font-size: 0.85rem;
+    justify-content: center;
   }
 
   .hero {
