@@ -346,26 +346,40 @@ footer {
    ABOUT (MEJORAS PRO)
 ========================= */
 
-/* Más legible y menos bloque */
+/* Contenedor alineado con el resto */
+#about .container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Bloque de texto bien colocado */
 #about p {
   margin-bottom: 14px;
   max-width: 700px;
   line-height: 1.7;
 }
 
-/* Destacar stack final */
+/* CENTRADO REAL DEL BLOQUE (clave) */
+#about p {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Título alineado con el contenido */
+#about h2 {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 25px;
+}
+
+/* Destacar stack */
 #about p:last-child {
   font-weight: 500;
   letter-spacing: 0.3px;
 }
 
-/* Alineado profesional (NO centrado) */
-#about .container {
-  max-width: 1100px;
-  margin: auto;
-}
-
-/* Separación visual respecto al hero */
+/* Separación visual */
 #about {
-  padding-top: 70px;
+  padding-top: 90px;
 }
