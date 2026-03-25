@@ -362,7 +362,7 @@ footer {
 /* Alineado profesional (NO centrado) */
 #about .container {
   max-width: 800px;
-  margin-left: 0;
+  margin: 0 auto;
 }
 
 /* Separación visual respecto al hero */
