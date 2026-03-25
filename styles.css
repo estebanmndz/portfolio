@@ -28,7 +28,7 @@ body {
   line-height: 1.6;
 }
 
-/* FIX LINKS (IMPORTANTE) */
+/* LINKS FIX */
 a {
   color: inherit;
   text-decoration: none;
@@ -54,7 +54,7 @@ nav {
   position: fixed;
   width: 100%;
   top: 0;
-  background: rgba(2,6,23,0.8);
+  background: rgba(2,6,23,0.85);
   backdrop-filter: blur(10px);
   z-index: 1000;
 }
@@ -73,7 +73,7 @@ nav {
 .menu a {
   margin-left: 20px;
   color: var(--muted);
-  transition: 0.2s;
+  font-size: 0.9rem;
 }
 
 .menu a:hover {
@@ -118,27 +118,22 @@ nav {
 }
 
 .btn {
-  padding: 10px 18px;
+  padding: 12px 18px;
   border-radius: 8px;
   background: var(--accent);
   color: black;
   font-size: 0.9rem;
-  transition: 0.25s;
-}
-
-.btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(56,189,248,0.3);
+  text-align: center;
+  min-height: 44px; /* touch friendly */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn.secondary {
   background: transparent;
   border: 1px solid var(--accent);
   color: var(--accent);
-}
-
-.btn.secondary:hover {
-  background: rgba(56,189,248,0.1);
 }
 
 /* =========================
@@ -170,11 +165,11 @@ h2 {
 }
 
 /* =========================
-   FEATURED PROJECT
+   FEATURED
 ========================= */
 .featured {
-  margin-bottom: 50px;
-  padding: 40px;
+  margin-bottom: 40px;
+  padding: 30px;
   border-radius: 20px;
 
   background: linear-gradient(
@@ -187,7 +182,7 @@ h2 {
 }
 
 .featured h3 {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   margin: 10px 0;
 }
 
@@ -200,40 +195,30 @@ h2 {
 ========================= */
 .grid {
   display: grid;
-  gap: 25px;
+  gap: 20px;
 }
 
 /* =========================
-   CARDS (FIXED BIEN)
+   CARDS
 ========================= */
 .card {
   display: block;
-  padding: 25px;
-  border-radius: 16px;
+  padding: 20px;
+  border-radius: 14px;
 
   background: rgba(15, 23, 42, 0.6);
   border: 1px solid rgba(56,189,248,0.15);
-
-  transition: all 0.3s ease;
 }
 
-.card:hover {
-  transform: translateY(-6px);
-  border-color: rgba(56,189,248,0.4);
-  box-shadow: 0 15px 40px rgba(0,0,0,0.6);
-}
-
-/* TITULO */
 .card h3 {
   margin: 10px 0;
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   font-weight: 600;
 }
 
-/* DESCRIPCION (ARREGLADO) */
 .card p {
   color: #cbd5f5;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
 }
 
 /* TAG */
@@ -248,14 +233,13 @@ h2 {
 }
 
 /* =========================
-   CONTACTO (ARREGLADO)
+   CONTACT
 ========================= */
 .contact-box {
   max-width: 600px;
   margin: auto;
   text-align: center;
-
-  padding: 40px;
+  padding: 30px;
   border-radius: 16px;
 
   background: rgba(15, 23, 42, 0.6);
@@ -266,23 +250,78 @@ h2 {
   color: var(--accent);
 }
 
-#contact a:hover {
-  text-decoration: underline;
-}
-
 /* =========================
    FOOTER
 ========================= */
 footer {
   margin-top: 60px;
   text-align: center;
-  padding: 30px;
+  padding: 25px;
+  font-size: 0.9rem;
   color: var(--muted);
-  border-top: 1px solid rgba(255,255,255,0.05);
 }
 
 /* =========================
-   RESPONSIVE
+   MOBILE FIRST FIXES
+========================= */
+@media (max-width: 600px) {
+
+  /* NAV */
+  .nav-inner {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 0;
+  }
+
+  .menu {
+    margin-top: 8px;
+  }
+
+  .menu a {
+    margin: 0 10px;
+    font-size: 0.85rem;
+  }
+
+  /* HERO */
+  .hero {
+    padding: 120px 0 60px;
+  }
+
+  .hero h1 {
+    font-size: 2.1rem;
+  }
+
+  .highlight {
+    font-size: 0.9rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+  }
+
+  /* BUTTONS */
+  .buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  /* CARDS */
+  .card {
+    padding: 18px;
+  }
+
+  /* CONTACT */
+  .contact-box {
+    padding: 25px;
+  }
+}
+
+/* =========================
+   TABLET
 ========================= */
 @media (min-width: 768px) {
   .grid {
@@ -290,10 +329,13 @@ footer {
   }
 
   .hero h1 {
-    font-size: 3.5rem;
+    font-size: 3.2rem;
   }
 }
 
+/* =========================
+   DESKTOP
+========================= */
 @media (min-width: 1024px) {
   .grid {
     grid-template-columns: repeat(3, 1fr);
