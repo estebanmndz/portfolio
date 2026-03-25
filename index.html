@@ -13,10 +13,16 @@
 <nav>
   <div class="container nav-inner">
     <div class="logo">estebanmndz</div>
+
     <div class="menu">
-      <a href="#about">Sobre mí</a>
-      <a href="#projects">Proyectos</a>
-      <a href="#contact">Contacto</a>
+      <a href="#about" data-i18n="nav_about">Sobre mí</a>
+      <a href="#projects" data-i18n="nav_projects">Proyectos</a>
+      <a href="#contact" data-i18n="nav_contact">Contacto</a>
+    </div>
+
+    <div class="lang-switch">
+      <button onclick="setLang('es')">ES</button>
+      <button onclick="setLang('en')">EN</button>
     </div>
   </div>
 </nav>
@@ -24,7 +30,7 @@
 <section class="hero">
   <div class="container">
 
-    <h1>
+    <h1 data-i18n="title">
       Esteban Méndez <br>
       <span>Cloud Engineer</span>
     </h1>
@@ -33,35 +39,35 @@
       Azure · Terraform · Automatización · Linux
     </p>
 
-    <p class="description">
+    <p class="description" data-i18n="description">
       Diseño y automatizo infraestructura en Azure con foco en redes, seguridad y despliegues reproducibles.
     </p>
 
     <div class="buttons">
       <a href="https://github.com/estebanmndz" target="_blank" class="btn">GitHub</a>
-      <a href="#projects" class="btn secondary">Ver proyectos</a>
+      <a href="#projects" class="btn secondary" data-i18n="btn_projects">Ver proyectos</a>
     </div>
 
   </div>
 </section>
 
-<!-- SOBRE MI -->
+<!-- ABOUT -->
 <section id="about">
   <div class="container">
 
-    <h2>Sobre mí</h2>
+    <h2 data-i18n="about_title">Sobre mí</h2>
 
-    <p>
+    <p data-i18n="about_1">
       Técnico de sistemas con experiencia en entornos Linux y operación de infraestructura.
       Actualmente enfocado en Cloud Engineering, trabajando con Azure, automatización y despliegue de entornos cloud.
     </p>
 
-    <p>
+    <p data-i18n="about_2">
       Desarrollo proyectos prácticos orientados a escenarios reales: provisión de infraestructura, automatización con PowerShell y Bash,
       optimización de costes (FinOps), seguridad y monitorización.
     </p>
 
-    <p>
+    <p data-i18n="about_3">
       Mi objetivo es evolucionar hacia un rol de Cloud / Infrastructure Engineer, aportando experiencia en sistemas,
       automatización y despliegue de soluciones en Azure.
     </p>
@@ -73,58 +79,58 @@
   </div>
 </section>
 
-<!-- PROYECTOS -->
+<!-- PROJECTS -->
 <section id="projects">
   <div class="container">
-    <h2>Proyectos</h2>
+    <h2 data-i18n="projects_title">Proyectos</h2>
 
     <div class="grid">
 
       <a href="https://github.com/estebanmndz/azure-create-vm" target="_blank" class="card">
         <span class="tag">Azure</span>
         <h3>Azure VM Deployment</h3>
-        <p>Infraestructura completa con VNet, NSG, VM y buenas prácticas cloud.</p>
+        <p data-i18n="p1">Infraestructura completa con VNet, NSG, VM y buenas prácticas cloud.</p>
       </a>
 
       <a href="https://github.com/estebanmndz/azure-clean-orphans" target="_blank" class="card">
         <span class="tag">FinOps</span>
         <h3>Orphan Resource Cleaner</h3>
-        <p>Limpieza automática de recursos huérfanos para optimización de costes.</p>
+        <p data-i18n="p2">Limpieza automática de recursos huérfanos para optimización de costes.</p>
       </a>
 
       <a href="https://github.com/estebanmndz/azure-backup-blob" target="_blank" class="card">
         <span class="tag">Storage</span>
         <h3>Backup a Azure Blob</h3>
-        <p>Automatización de backups con AzCopy y control de ejecución.</p>
+        <p data-i18n="p3">Automatización de backups con AzCopy y control de ejecución.</p>
       </a>
 
       <a href="https://github.com/estebanmndz/docker-autodeploy" target="_blank" class="card">
         <span class="tag">Docker</span>
         <h3>Docker Auto Deploy</h3>
-        <p>Despliegue automático de contenedores en entornos Linux.</p>
+        <p data-i18n="p4">Despliegue automático de contenedores en entornos Linux.</p>
       </a>
 
       <a href="https://github.com/estebanmndz/linux-hardening" target="_blank" class="card">
         <span class="tag">Security</span>
         <h3>Linux Hardening</h3>
-        <p>Seguridad en Linux con UFW, Fail2Ban y SSH hardening.</p>
+        <p data-i18n="p5">Seguridad en Linux con UFW, Fail2Ban y SSH hardening.</p>
       </a>
 
       <a href="https://github.com/estebanmndz/linux-monitoring" target="_blank" class="card">
         <span class="tag">Monitoring</span>
         <h3>Linux Monitoring</h3>
-        <p>Métricas de CPU, RAM y disco con alertas básicas.</p>
+        <p data-i18n="p6">Métricas de CPU, RAM y disco con alertas básicas.</p>
       </a>
 
     </div>
   </div>
 </section>
 
-<!-- CONTACTO -->
+<!-- CONTACT -->
 <section id="contact">
   <div class="container contact-box">
 
-    <h2>Contacto</h2>
+    <h2 data-i18n="contact_title">Contacto</h2>
 
     <p>
       📧 <a href="mailto:mendezesteban1804@gmail.com">mendezesteban1804@gmail.com</a>
@@ -140,6 +146,62 @@
 <footer>
   © 2026 Esteban Méndez · Cloud Engineer
 </footer>
+
+<!-- JS TRADUCCIONES -->
+<script>
+const translations = {
+  es: {
+    nav_about: "Sobre mí",
+    nav_projects: "Proyectos",
+    nav_contact: "Contacto",
+    title: "Esteban Méndez <br><span>Cloud Engineer</span>",
+    description: "Diseño y automatizo infraestructura en Azure con foco en redes, seguridad y despliegues reproducibles.",
+    btn_projects: "Ver proyectos",
+    about_title: "Sobre mí",
+    about_1: "Técnico de sistemas con experiencia en entornos Linux y operación de infraestructura. Actualmente enfocado en Cloud Engineering.",
+    about_2: "Desarrollo proyectos prácticos orientados a escenarios reales en Azure, automatización y optimización de costes.",
+    about_3: "Mi objetivo es evolucionar hacia un rol de Cloud / Infrastructure Engineer.",
+    projects_title: "Proyectos",
+    contact_title: "Contacto",
+    p1: "Infraestructura completa con VNet, NSG, VM y buenas prácticas cloud.",
+    p2: "Limpieza automática de recursos huérfanos para optimización de costes.",
+    p3: "Automatización de backups con AzCopy y control de ejecución.",
+    p4: "Despliegue automático de contenedores en entornos Linux.",
+    p5: "Seguridad en Linux con UFW, Fail2Ban y SSH hardening.",
+    p6: "Métricas de CPU, RAM y disco con alertas básicas."
+  },
+  en: {
+    nav_about: "About",
+    nav_projects: "Projects",
+    nav_contact: "Contact",
+    title: "Esteban Méndez <br><span>Cloud Engineer</span>",
+    description: "I design and automate Azure infrastructure focusing on networking, security, and scalable deployments.",
+    btn_projects: "View projects",
+    about_title: "About me",
+    about_1: "Systems technician with experience in Linux environments and infrastructure operations, currently focused on Cloud Engineering.",
+    about_2: "I build real-world projects in Azure, focusing on automation, infrastructure, and cost optimization.",
+    about_3: "My goal is to grow into a Cloud / Infrastructure Engineer role.",
+    projects_title: "Projects",
+    contact_title: "Contact",
+    p1: "Full infrastructure deployment with VNet, NSG, VM, and cloud best practices.",
+    p2: "Automated cleanup of orphan resources to reduce cloud costs.",
+    p3: "Automated backups to Azure Blob using AzCopy.",
+    p4: "Automated Docker container deployment in Linux environments.",
+    p5: "Linux security hardening with UFW, Fail2Ban, and SSH configuration.",
+    p6: "Basic system monitoring for CPU, RAM, and disk usage."
+  }
+};
+
+function setLang(lang) {
+  document.documentElement.lang = lang;
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.getAttribute("data-i18n");
+    if (translations[lang][key]) {
+      el.innerHTML = translations[lang][key];
+    }
+  });
+}
+</script>
 
 </body>
 </html>
