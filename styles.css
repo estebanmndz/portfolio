@@ -359,9 +359,10 @@ footer {
   letter-spacing: 0.3px;
 }
 
-/* Control de ancho en pantallas grandes */
+/* Alineado profesional (NO centrado) */
 #about .container {
   max-width: 800px;
+  margin-left: 0;
 }
 
 /* Separación visual respecto al hero */
