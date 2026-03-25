@@ -341,3 +341,30 @@ footer {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+/* =========================
+   ABOUT (MEJORAS PRO)
+========================= */
+
+/* Más legible y menos bloque */
+#about p {
+  margin-bottom: 14px;
+  max-width: 700px;
+  line-height: 1.7;
+}
+
+/* Destacar stack final */
+#about p:last-child {
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+/* Control de ancho en pantallas grandes */
+#about .container {
+  max-width: 800px;
+}
+
+/* Separación visual respecto al hero */
+#about {
+  padding-top: 70px;
+}
