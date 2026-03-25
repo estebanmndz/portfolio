@@ -83,10 +83,10 @@ nav {
 .menu {
   display: flex;
   align-items: center;
+  gap: 18px;
 }
 
 .menu a {
-  margin-left: 20px;
   color: var(--muted);
   font-size: 0.9rem;
   transition: 0.2s;
@@ -292,79 +292,42 @@ footer {
 }
 
 /* =========================
-   MOBILE
+   SKILLS
 ========================= */
-@media (max-width: 600px) {
+#skills {
+  padding: 90px 0;
+}
 
-  .nav-inner {
-    flex-direction: column;
-    gap: 8px;
-    height: auto;
-    padding: 10px 0;
-  }
+.skills-grid {
+  display: grid;
+  gap: 20px;
+}
 
-  .menu {
-    justify-content: center;
-  }
+.skills-grid div {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(56,189,248,0.15);
+  border-radius: 12px;
+  padding: 18px;
+}
 
-  .hero {
-    padding: 120px 0 60px;
-  }
+.skills-grid h4 {
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+  color: var(--accent);
+}
 
-  .hero h1 {
-    font-size: 2.1rem;
-  }
-
-  .buttons {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .btn {
-    width: 100%;
-  }
-
-  .card {
-    padding: 18px;
-  }
-
-  .contact-box {
-    padding: 25px;
-  }
+.skills-grid p {
+  font-size: 0.9rem;
+  color: var(--text);
 }
 
 /* =========================
-   TABLET
+   TIMELINE
 ========================= */
-@media (min-width: 768px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .hero h1 {
-    font-size: 3.2rem;
-  }
-}
-
-/* =========================
-   DESKTOP
-========================= */
-@media (min-width: 1024px) {
-  .grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-
-
-/* =========================
-   TIMELINE FIX PRO
-========================= */
-
 .timeline {
   position: relative;
   margin-top: 40px;
-  max-width: 800px; /* 👈 CLAVE */
+  max-width: 800px;
 }
 
 .timeline::before {
@@ -400,27 +363,51 @@ footer {
   margin-bottom: 6px;
 }
 
-.timeline-content h3 {
-  font-size: 1.1rem;
-  margin-bottom: 6px;
-}
-
 .timeline-content p {
   color: var(--muted);
-  font-size: 0.95rem;
-  margin-bottom: 6px;
-}
-
-.timeline-tech {
-  font-size: 0.85rem;
-  color: var(--accent);
 }
 
 /* =========================
-   RESPONSIVE (MUY IMPORTANTE)
+   MOBILE (FIX REAL)
 ========================= */
-
 @media (max-width: 600px) {
+
+  .nav-inner {
+    flex-direction: column;
+    gap: 10px;
+    height: auto;
+    padding: 12px 0;
+  }
+
+  .menu {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .menu a {
+    font-size: 0.8rem;
+  }
+
+  .lang-switch {
+    justify-content: center;
+  }
+
+  .hero {
+    padding: 120px 0 60px;
+  }
+
+  .hero h1 {
+    font-size: 2.1rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
 
   .timeline {
     max-width: 100%;
@@ -437,67 +424,29 @@ footer {
   .timeline-item::before {
     left: -1px;
   }
-
-  .timeline-content h3 {
-    font-size: 1rem;
-  }
-
-  .timeline-content p {
-    font-size: 0.9rem;
-  }
-
-  .timeline-date {
-    font-size: 0.75rem;
-  }
-}
-/* MOBILE */
-@media (max-width: 600px) {
-  .timeline {
-    padding-left: 20px;
-  }
-
-  .timeline-item::before {
-    left: -8px;
-  }
 }
 
 /* =========================
-   SKILLS
+   TABLET
 ========================= */
-#skills {
-  padding: 90px 0;
-}
-
-.skills-grid {
-  display: grid;
-  gap: 20px;
-}
-
-.skills-grid div {
-  background: rgba(15, 23, 42, 0.6);
-  border: 1px solid rgba(56,189,248,0.15);
-  border-radius: 12px;
-  padding: 18px;
-}
-
-.skills-grid h4 {
-  margin-bottom: 6px;
-  font-size: 0.95rem;
-  color: var(--accent);
-}
-
-.skills-grid p {
-  font-size: 0.9rem;
-  color: var(--text);
-}
-
 @media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .skills-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
+/* =========================
+   DESKTOP
+========================= */
 @media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
   .skills-grid {
     grid-template-columns: repeat(3, 1fr);
   }
