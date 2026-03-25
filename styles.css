@@ -460,3 +460,45 @@ footer {
     left: -8px;
   }
 }
+
+/* =========================
+   SKILLS
+========================= */
+#skills {
+  padding: 90px 0;
+}
+
+.skills-grid {
+  display: grid;
+  gap: 20px;
+}
+
+.skills-grid div {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(56,189,248,0.15);
+  border-radius: 12px;
+  padding: 18px;
+}
+
+.skills-grid h4 {
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+  color: var(--accent);
+}
+
+.skills-grid p {
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+@media (min-width: 768px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
