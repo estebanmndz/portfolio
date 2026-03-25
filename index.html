@@ -16,6 +16,7 @@
 
     <div class="menu">
       <a href="#about" data-i18n="nav_about">Sobre mí</a>
+      <a href="#skills">Skills</a>
       <a href="#experience" data-i18n="nav_experience">Experiencia</a>
       <a href="#projects" data-i18n="nav_projects">Proyectos</a>
       <a href="#contact" data-i18n="nav_contact">Contacto</a>
@@ -37,7 +38,6 @@
     </h1>
 
     <p class="highlight" data-i18n="stack"></p>
-
     <p class="description" data-i18n="description"></p>
 
     <div class="buttons">
@@ -58,6 +58,23 @@
     <p style="margin-top:15px; color:#38bdf8;">
       Azure · Terraform · PowerShell · Bash · Linux · Docker · Networking
     </p>
+  </div>
+</section>
+
+<!-- NUEVA SECCIÓN SKILLS -->
+<section id="skills">
+  <div class="container">
+    <h2>Skills</h2>
+
+    <div class="skills-grid">
+      <div><h4>Cloud</h4><p>Microsoft Azure</p></div>
+      <div><h4>Infrastructure as Code</h4><p>Terraform</p></div>
+      <div><h4>Operating Systems</h4><p>Linux</p></div>
+      <div><h4>Containers</h4><p>Docker</p></div>
+      <div><h4>Networking</h4><p>VNets · Subnets · NSG</p></div>
+      <div><h4>Monitoring</h4><p>System monitoring · Logs</p></div>
+      <div><h4>Other</h4><p>Git · Bash · ServiceNow</p></div>
+    </div>
   </div>
 </section>
 
@@ -167,37 +184,37 @@ const translations = {
     nav_contact: "Contacto",
 
     title: "Esteban Méndez <br><span>Cloud Engineer</span>",
-    description: "Diseño y automatizo infraestructura en Azure con foco en redes, seguridad y despliegues reproducibles.",
+    description: "Diseño y despliego infraestructura en Azure usando Infrastructure as Code (Terraform), enfocada en entornos seguros, escalables y listos para producción.",
     stack: "Azure · Terraform · Automatización · Linux",
     btn_projects: "Ver proyectos",
 
     about_title: "Sobre mí",
-    about_1: "Técnico de sistemas con experiencia en entornos Linux y operación de infraestructura, actualmente enfocado en Cloud Engineering.",
-    about_2: "Desarrollo proyectos reales en Azure aplicando automatización, buenas prácticas de arquitectura y optimización de costes.",
-    about_3: "Mi objetivo es evolucionar hacia un rol de Cloud / Infrastructure Engineer aportando experiencia en sistemas y despliegue cloud.",
+    about_1: "Técnico de sistemas con experiencia en entornos Linux y operación de infraestructura, actualmente en transición hacia Cloud Engineering.",
+    about_2: "Especializado en construir infraestructura en Azure usando Terraform, aplicando buenas prácticas en redes, seguridad y optimización de costes.",
+    about_3: "Desarrollo proyectos reales diseñando y automatizando entornos cloud con redes, máquinas virtuales, monitorización y backups.",
 
     exp_title: "Experiencia",
     exp_role_1: "Administrador de Sistemas – Martinrea International",
-    exp_desc_1: "Operación de infraestructura IT en entorno industrial, monitorización, gestión de incidencias y coordinación con proveedores. Participación en migración de Active Directory a Microsoft Entra ID.",
+    exp_desc_1: "Operación de infraestructura IT en entorno industrial, incluyendo monitorización, gestión de incidencias y coordinación con proveedores. Soporte en entornos híbridos y participación en migración de Active Directory a Microsoft Entra ID.",
     exp_tech_1: "Azure · Linux · Networking · Monitorización · IT Operations",
 
     exp_role_2: "Soporte IT – Santander Global Tech",
-    exp_desc_2: "Soporte técnico de primer nivel, resolución de incidencias, troubleshooting y escalado en entorno corporativo con herramientas ITSM.",
+    exp_desc_2: "Soporte técnico de primer nivel en entorno enterprise usando ServiceNow. Resolución de incidencias, troubleshooting y escalado siguiendo procesos ITSM.",
     exp_tech_2: "ServiceNow · ITSM · Soporte L1 · Windows",
 
     exp_role_3: "Técnico de Sistemas – Hosting",
-    exp_desc_3: "Administración de servidores Linux, troubleshooting y soporte en entornos de hosting.",
+    exp_desc_3: "Administración de servidores Linux en entornos de hosting, incluyendo troubleshooting, soporte y gestión básica de red.",
     exp_tech_3: "Linux · Apache · Networking · Hosting",
 
     projects_title: "Proyectos",
     contact_title: "Contacto",
 
-    p1: "Despliegue automatizado de infraestructura en Azure (VNet, subnets, NSG y VM) siguiendo buenas prácticas cloud.",
-    p2: "Script FinOps para detectar y eliminar recursos huérfanos en Azure y reducir costes.",
-    p3: "Automatización de backups a Azure Blob Storage con AzCopy simulando escenarios reales.",
-    p4: "Despliegue automatizado de contenedores Docker en Linux con entorno reproducible.",
-    p5: "Hardening de Linux con firewall, protección SSH y Fail2Ban.",
-    p6: "Monitorización de CPU, RAM y disco para detección de problemas en servidores."
+    p1: "Provisionado de infraestructura en Azure usando Terraform (VNet, subnets, NSG, VM) siguiendo buenas prácticas de seguridad y escalabilidad.",
+    p2: "Script orientado a FinOps para detectar y eliminar recursos huérfanos en Azure, optimizando costes cloud.",
+    p3: "Automatización de backups a Azure Blob Storage usando AzCopy, simulando escenarios reales de protección de datos.",
+    p4: "Automatización de despliegue de contenedores Docker en Linux con configuración reproducible.",
+    p5: "Hardening de Linux incluyendo firewall, protección SSH y Fail2Ban para mejorar la seguridad del sistema.",
+    p6: "Monitorización de CPU, RAM y disco para detección temprana de problemas de rendimiento."
   },
 
   en: {
@@ -207,37 +224,37 @@ const translations = {
     nav_contact: "Contact",
 
     title: "Esteban Méndez <br><span>Cloud Engineer</span>",
-    description: "I design and automate Azure infrastructure focusing on networking, security, and scalable deployments.",
+    description: "I design and deploy Azure infrastructure using Infrastructure as Code (Terraform), focusing on secure, scalable, and production-ready environments.",
     stack: "Azure · Terraform · Automation · Linux",
     btn_projects: "View projects",
 
     about_title: "About me",
-    about_1: "Systems technician with experience in Linux environments and infrastructure operations, currently focused on Cloud Engineering.",
-    about_2: "I build real-world Azure projects applying automation, architecture best practices, and cost optimization.",
-    about_3: "My goal is to grow into a Cloud / Infrastructure Engineer role bringing strong systems and cloud deployment experience.",
+    about_1: "Systems technician with experience in Linux environments and infrastructure operations, currently transitioning into Cloud Engineering.",
+    about_2: "Specialized in building Azure infrastructure using Terraform, applying best practices in networking, security, and cost optimization.",
+    about_3: "I build real-world projects designing and automating cloud environments including networking, virtual machines, monitoring, and backups.",
 
     exp_title: "Experience",
     exp_role_1: "Systems Administrator – Martinrea International",
-    exp_desc_1: "IT infrastructure operations in an industrial environment, including monitoring, incident management, and vendor coordination. Participation in Active Directory to Microsoft Entra ID migration.",
+    exp_desc_1: "IT infrastructure operations in an industrial environment, including monitoring, incident management, and vendor coordination. Supported hybrid environments and participated in Active Directory to Microsoft Entra ID migration.",
     exp_tech_1: "Azure · Linux · Networking · Monitoring · IT Operations",
 
     exp_role_2: "IT Support – Santander Global Tech",
-    exp_desc_2: "First-line technical support, incident resolution, troubleshooting, and escalation in enterprise environments using ITSM tools.",
+    exp_desc_2: "Provided first-line technical support in enterprise environments using ServiceNow. Incident resolution, troubleshooting, and escalation following ITSM processes.",
     exp_tech_2: "ServiceNow · ITSM · L1 Support · Windows",
 
     exp_role_3: "Systems Technician – Hosting",
-    exp_desc_3: "Linux server administration, troubleshooting, and support in hosting environments.",
+    exp_desc_3: "Managed Linux-based hosting environments, including server administration, troubleshooting, and basic networking.",
     exp_tech_3: "Linux · Apache · Networking · Hosting",
 
     projects_title: "Projects",
     contact_title: "Contact",
 
-    p1: "Automated Azure infrastructure deployment (VNet, subnets, NSG, VM) following cloud best practices.",
-    p2: "FinOps script to detect and remove orphan Azure resources and reduce cloud costs.",
-    p3: "Automated backups to Azure Blob Storage using AzCopy.",
-    p4: "Automated Docker container deployment on Linux with reproducible setup.",
-    p5: "Linux hardening with firewall, SSH protection, and Fail2Ban.",
-    p6: "System monitoring (CPU, RAM, disk) to detect performance issues."
+    p1: "Provisioned Azure infrastructure using Terraform (VNet, subnets, NSG, VM) following best practices for security and scalability.",
+    p2: "FinOps-oriented script to identify and remove orphan Azure resources, reducing cloud costs.",
+    p3: "Automated backups to Azure Blob Storage using AzCopy, simulating real-world data protection scenarios.",
+    p4: "Automated Docker container deployment on Linux with reproducible configuration.",
+    p5: "Implemented Linux hardening including firewall, SSH protection, and Fail2Ban.",
+    p6: "System monitoring (CPU, RAM, disk) to detect performance issues early."
   }
 };
 
