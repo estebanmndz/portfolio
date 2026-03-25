@@ -28,6 +28,17 @@ body {
   line-height: 1.6;
 }
 
+/* =========================
+   SCROLL FIX (NAV + ANCLAS)
+========================= */
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 90px;
+}
+
 /* LINKS FIX */
 a {
   color: inherit;
@@ -124,7 +135,7 @@ nav {
   color: black;
   font-size: 0.9rem;
   text-align: center;
-  min-height: 44px; /* touch friendly */
+  min-height: 44px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -142,6 +153,8 @@ nav {
 section {
   padding: 90px 0;
 }
+
+/* (ya tiene scroll-margin arriba, no lo duplicamos) */
 
 h2 {
   margin-bottom: 30px;
@@ -262,11 +275,10 @@ footer {
 }
 
 /* =========================
-   MOBILE FIRST FIXES
+   MOBILE
 ========================= */
 @media (max-width: 600px) {
 
-  /* NAV */
   .nav-inner {
     flex-direction: column;
     height: auto;
@@ -282,7 +294,6 @@ footer {
     font-size: 0.85rem;
   }
 
-  /* HERO */
   .hero {
     padding: 120px 0 60px;
   }
@@ -291,15 +302,6 @@ footer {
     font-size: 2.1rem;
   }
 
-  .highlight {
-    font-size: 0.9rem;
-  }
-
-  .description {
-    font-size: 0.9rem;
-  }
-
-  /* BUTTONS */
   .buttons {
     flex-direction: column;
     align-items: stretch;
@@ -309,12 +311,10 @@ footer {
     width: 100%;
   }
 
-  /* CARDS */
   .card {
     padding: 18px;
   }
 
-  /* CONTACT */
   .contact-box {
     padding: 25px;
   }
