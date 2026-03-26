@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Esteban Méndez | Cloud Engineer</title>
-
 <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -121,25 +120,17 @@
 
     <div class="grid">
 
-      <!-- 🧱 TERRAFORM -->
+      <!-- 🧱 Terraform añadido -->
       <a href="https://github.com/estebanmndz/terraform-azure-vm" target="_blank" class="card">
         <span class="tag">IaC</span>
         <h3>Azure Infrastructure (Terraform)</h3>
         <p data-i18n="p0"></p>
       </a>
 
-      <!-- 🖥️ VM -->
       <a href="https://github.com/estebanmndz/azure-create-vm" target="_blank" class="card">
         <span class="tag">Azure</span>
         <h3>Azure VM Deployment</h3>
         <p data-i18n="p1"></p>
-      </a>
-
-      <!-- 👤 ENTRA ID -->
-      <a href="https://github.com/estebanmndz/azure-ad-user-import" target="_blank" class="card">
-        <span class="tag">Identity</span>
-        <h3>Azure AD User Import</h3>
-        <p data-i18n="p7"></p>
       </a>
 
       <a href="https://github.com/estebanmndz/azure-clean-orphans" target="_blank" class="card">
@@ -190,12 +181,93 @@
 </footer>
 
 <script>
-/* 🔥 SOLO añadimos esto, sin romper nada */
-translations.es.p0 = "Provisionamiento de infraestructura en Azure mediante Terraform (IaC), incluyendo red, seguridad y máquina virtual, con despliegues reproducibles e idempotentes.";
-translations.es.p7 = "Provisionamiento masivo de usuarios en Azure AD usando Microsoft Graph con validación, control de duplicados y manejo de errores.";
+const translations = {
+  es: {
+    nav_about: "Sobre mí",
+    nav_experience: "Experiencia",
+    nav_projects: "Proyectos",
+    nav_contact: "Contacto",
+    title: "Esteban Méndez <br><span>Cloud Engineer</span>",
+    description: "Diseño y despliego infraestructura en Azure usando Infrastructure as Code (Terraform), enfocada en entornos seguros, escalables y listos para producción.",
+    stack: "Azure · Terraform · Automatización · Linux",
+    btn_projects: "Ver proyectos",
+    about_title: "Sobre mí",
+    about_1: "Técnico de sistemas con experiencia en entornos Linux y operación de infraestructura, actualmente en transición hacia Cloud Engineering.",
+    about_2: "Especializado en construir infraestructura en Azure usando Terraform, aplicando buenas prácticas en redes, seguridad y optimización de costes.",
+    about_3: "Desarrollo proyectos reales diseñando y automatizando entornos cloud con redes, máquinas virtuales, monitorización y backups.",
+    exp_title: "Experiencia",
+    exp_role_1: "Administrador de Sistemas – Martinrea International",
+    exp_desc_1: "Operación de infraestructura IT en entorno industrial, incluyendo monitorización, gestión de incidencias y coordinación con proveedores. Soporte en entornos híbridos y participación en migración de Active Directory a Microsoft Entra ID.",
+    exp_tech_1: "Azure · Linux · Networking · Monitorización · IT Operations",
+    exp_role_2: "Soporte IT – Santander Global Tech",
+    exp_desc_2: "Soporte técnico de primer nivel en entorno enterprise usando ServiceNow. Resolución de incidencias, troubleshooting y escalado siguiendo procesos ITSM.",
+    exp_tech_2: "ServiceNow · ITSM · Soporte L1 · Windows",
+    exp_role_3: "Técnico de Sistemas – Hosting",
+    exp_desc_3: "Administración de servidores Linux en entornos de hosting, incluyendo troubleshooting, soporte y gestión básica de red.",
+    exp_tech_3: "Linux · Apache · Networking · Hosting",
+    projects_title: "Proyectos",
+    contact_title: "Contacto",
 
-translations.en.p0 = "Provisioning Azure infrastructure using Terraform (IaC), including networking, security and virtual machine, with reproducible and idempotent deployments.";
-translations.en.p7 = "Bulk user provisioning in Azure AD using Microsoft Graph with validation, duplicate detection and error handling.";
+    p0: "Provisionamiento de infraestructura en Azure mediante Terraform (IaC), incluyendo red, seguridad y máquina virtual, con despliegues reproducibles e idempotentes.",
+    p1: "Provisionado de infraestructura en Azure usando Terraform (VNet, subnets, NSG, VM) siguiendo buenas prácticas de seguridad y escalabilidad.",
+    p2: "Script orientado a FinOps para detectar y eliminar recursos huérfanos en Azure, optimizando costes cloud.",
+    p3: "Automatización de backups a Azure Blob Storage usando AzCopy, simulando escenarios reales de protección de datos.",
+    p4: "Automatización de despliegue de contenedores Docker en Linux con configuración reproducible.",
+    p5: "Hardening de Linux incluyendo firewall, protección SSH y Fail2Ban para mejorar la seguridad del sistema.",
+    p6: "Monitorización de CPU, RAM y disco para detección temprana de problemas de rendimiento."
+  },
+
+  en: {
+    nav_about: "About",
+    nav_experience: "Experience",
+    nav_projects: "Projects",
+    nav_contact: "Contact",
+    title: "Esteban Méndez <br><span>Cloud Engineer</span>",
+    description: "I design and deploy Azure infrastructure using Infrastructure as Code (Terraform), focusing on secure, scalable, and production-ready environments.",
+    stack: "Azure · Terraform · Automation · Linux",
+    btn_projects: "View projects",
+    about_title: "About me",
+    about_1: "Systems technician with experience in Linux environments and infrastructure operations, currently transitioning into Cloud Engineering.",
+    about_2: "Specialized in building Azure infrastructure using Terraform, applying best practices in networking, security, and cost optimization.",
+    about_3: "I build real-world projects designing and automating cloud environments including networking, virtual machines, monitoring, and backups.",
+    exp_title: "Experience",
+    exp_role_1: "Systems Administrator – Martinrea International",
+    exp_desc_1: "IT infrastructure operations in an industrial environment, including monitoring, incident management, and vendor coordination. Supported hybrid environments and participated in Active Directory to Microsoft Entra ID migration.",
+    exp_tech_1: "Azure · Linux · Networking · Monitoring · IT Operations",
+    exp_role_2: "IT Support – Santander Global Tech",
+    exp_desc_2: "Provided first-line technical support in enterprise environments using ServiceNow. Incident resolution, troubleshooting, and escalation following ITSM processes.",
+    exp_tech_2: "ServiceNow · ITSM · L1 Support · Windows",
+    exp_role_3: "Systems Technician – Hosting",
+    exp_desc_3: "Managed Linux-based hosting environments, including server administration, troubleshooting, and basic networking.",
+    exp_tech_3: "Linux · Apache · Networking · Hosting",
+    projects_title: "Projects",
+    contact_title: "Contact",
+
+    p0: "Provisioning Azure infrastructure using Terraform (IaC), including networking, security and virtual machine, with reproducible and idempotent deployments.",
+    p1: "Provisioned Azure infrastructure using Terraform (VNet, subnets, NSG, VM) following best practices for security and scalability.",
+    p2: "FinOps-oriented script to identify and remove orphan Azure resources, reducing cloud costs.",
+    p3: "Automated backups to Azure Blob Storage using AzCopy, simulating real-world data protection scenarios.",
+    p4: "Automated Docker container deployment on Linux with reproducible configuration.",
+    p5: "Implemented Linux hardening including firewall, SSH protection, and Fail2Ban.",
+    p6: "System monitoring (CPU, RAM, disk) to detect performance issues early."
+  }
+};
+
+function setLang(lang) {
+  document.documentElement.lang = lang;
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.dataset.i18n;
+    if (translations[lang][key]) {
+      el.innerHTML = translations[lang][key];
+    }
+  });
+  localStorage.setItem("lang", lang);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const savedLang = localStorage.getItem("lang") || "es";
+  setLang(savedLang);
+});
 </script>
 
 </body>
