@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Esteban Méndez | Cloud Engineer</title>
-
 <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -15,11 +14,11 @@
     <div class="logo">estebanmndz</div>
 
     <div class="menu">
-      <a href="#about" data-i18n="nav_about">Sobre mí</a>
+      <a href="#about">Sobre mí</a>
       <a href="#skills">Skills</a>
-      <a href="#experience" data-i18n="nav_experience">Experiencia</a>
-      <a href="#projects" data-i18n="nav_projects">Proyectos</a>
-      <a href="#contact" data-i18n="nav_contact">Contacto</a>
+      <a href="#experience">Experiencia</a>
+      <a href="#projects">Proyectos</a>
+      <a href="#contact">Contacto</a>
     </div>
 
     <div class="lang-switch">
@@ -31,131 +30,76 @@
 
 <section class="hero">
   <div class="container">
-
-    <h1 data-i18n="title">
+    <h1>
       Esteban Méndez <br>
       <span>Cloud Engineer</span>
     </h1>
 
-    <p class="highlight" data-i18n="stack"></p>
-    <p class="description" data-i18n="description"></p>
+    <p class="highlight">Azure · Terraform · Automatización · Linux</p>
+    <p class="description">
+      Diseño y despliego infraestructura en Azure usando Infrastructure as Code (Terraform),
+      enfocada en entornos seguros, escalables y listos para producción.
+    </p>
 
     <div class="buttons">
       <a href="https://github.com/estebanmndz" target="_blank" class="btn">GitHub</a>
-      <a href="#projects" class="btn secondary" data-i18n="btn_projects"></a>
-    </div>
-
-  </div>
-</section>
-
-<section id="about">
-  <div class="container">
-    <h2 data-i18n="about_title"></h2>
-    <p data-i18n="about_1"></p>
-    <p data-i18n="about_2"></p>
-    <p data-i18n="about_3"></p>
-
-    <p style="margin-top:15px; color:#38bdf8;">
-      Azure · Terraform · PowerShell · Bash · Linux · Docker · Networking
-    </p>
-  </div>
-</section>
-
-<!-- NUEVA SECCIÓN SKILLS -->
-<section id="skills">
-  <div class="container">
-    <h2>Skills</h2>
-
-    <div class="skills-grid">
-      <div><h4>Cloud</h4><p>Microsoft Azure</p></div>
-      <div><h4>Infrastructure as Code</h4><p>Terraform</p></div>
-      <div><h4>Operating Systems</h4><p>Linux</p></div>
-      <div><h4>Containers</h4><p>Docker</p></div>
-      <div><h4>Networking</h4><p>VNets · Subnets · NSG</p></div>
-      <div><h4>Monitoring</h4><p>System monitoring · Logs</p></div>
-      <div><h4>Other</h4><p>Git · Bash · ServiceNow</p></div>
-    </div>
-  </div>
-</section>
-
-<section id="experience">
-  <div class="container">
-
-    <h2 data-i18n="exp_title"></h2>
-
-    <div class="timeline">
-
-      <div class="timeline-item">
-        <div class="timeline-date">2023 - Actualidad</div>
-        <div class="timeline-content">
-          <h3 data-i18n="exp_role_1"></h3>
-          <p data-i18n="exp_desc_1"></p>
-          <p class="timeline-tech" data-i18n="exp_tech_1"></p>
-        </div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-date">2021 - 2023</div>
-        <div class="timeline-content">
-          <h3 data-i18n="exp_role_2"></h3>
-          <p data-i18n="exp_desc_2"></p>
-          <p class="timeline-tech" data-i18n="exp_tech_2"></p>
-        </div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-date">2020 - 2021</div>
-        <div class="timeline-content">
-          <h3 data-i18n="exp_role_3"></h3>
-          <p data-i18n="exp_desc_3"></p>
-          <p class="timeline-tech" data-i18n="exp_tech_3"></p>
-        </div>
-      </div>
-
+      <a href="#projects" class="btn secondary">Ver proyectos</a>
     </div>
   </div>
 </section>
 
 <section id="projects">
   <div class="container">
-    <h2 data-i18n="projects_title"></h2>
+    <h2>Proyectos</h2>
 
     <div class="grid">
+
+      <a href="https://github.com/estebanmndz/terraform-azure-vm" target="_blank" class="card">
+        <span class="tag">IaC</span>
+        <h3>Azure Infrastructure (Terraform)</h3>
+        <p>Provisionamiento de infraestructura en Azure mediante Terraform (IaC), incluyendo red, seguridad y máquina virtual, con despliegues reproducibles e idempotentes.</p>
+      </a>
 
       <a href="https://github.com/estebanmndz/azure-create-vm" target="_blank" class="card">
         <span class="tag">Azure</span>
         <h3>Azure VM Deployment</h3>
-        <p data-i18n="p1"></p>
+        <p>Provisionado de infraestructura en Azure usando PowerShell (VNet, subnets, NSG, VM) siguiendo buenas prácticas de seguridad y escalabilidad.</p>
+      </a>
+
+      <a href="https://github.com/estebanmndz/azure-ad-user-import" target="_blank" class="card">
+        <span class="tag">Identity</span>
+        <h3>Azure AD User Import</h3>
+        <p>Provisionamiento masivo de usuarios en Azure AD usando Microsoft Graph con validación, control de duplicados y manejo de errores.</p>
       </a>
 
       <a href="https://github.com/estebanmndz/azure-clean-orphans" target="_blank" class="card">
         <span class="tag">FinOps</span>
         <h3>Orphan Resource Cleaner</h3>
-        <p data-i18n="p2"></p>
+        <p>Script orientado a FinOps para detectar y eliminar recursos huérfanos en Azure, optimizando costes cloud.</p>
       </a>
 
       <a href="https://github.com/estebanmndz/azure-backup-blob" target="_blank" class="card">
         <span class="tag">Storage</span>
         <h3>Backup a Azure Blob</h3>
-        <p data-i18n="p3"></p>
+        <p>Automatización de backups a Azure Blob Storage usando AzCopy, simulando escenarios reales de protección de datos.</p>
       </a>
 
       <a href="https://github.com/estebanmndz/docker-autodeploy" target="_blank" class="card">
         <span class="tag">Docker</span>
         <h3>Docker Auto Deploy</h3>
-        <p data-i18n="p4"></p>
+        <p>Automatización de despliegue de contenedores Docker en Linux con configuración reproducible.</p>
       </a>
 
       <a href="https://github.com/estebanmndz/linux-hardening" target="_blank" class="card">
         <span class="tag">Security</span>
         <h3>Linux Hardening</h3>
-        <p data-i18n="p5"></p>
+        <p>Hardening de Linux incluyendo firewall, protección SSH y Fail2Ban para mejorar la seguridad del sistema.</p>
       </a>
 
       <a href="https://github.com/estebanmndz/linux-monitoring" target="_blank" class="card">
         <span class="tag">Monitoring</span>
         <h3>Linux Monitoring</h3>
-        <p data-i18n="p6"></p>
+        <p>Monitorización de CPU, RAM y disco para detección temprana de problemas de rendimiento.</p>
       </a>
 
     </div>
@@ -164,8 +108,7 @@
 
 <section id="contact">
   <div class="container contact-box">
-    <h2 data-i18n="contact_title"></h2>
-
+    <h2>Contacto</h2>
     <p>📧 <a href="mailto:mendezesteban1804@gmail.com">mendezesteban1804@gmail.com</a></p>
     <p>💻 <a href="https://github.com/estebanmndz" target="_blank">github.com/estebanmndz</a></p>
   </div>
@@ -174,108 +117,6 @@
 <footer>
   © 2026 Esteban Méndez · Cloud Engineer
 </footer>
-
-<script>
-const translations = {
-  es: {
-    nav_about: "Sobre mí",
-    nav_experience: "Experiencia",
-    nav_projects: "Proyectos",
-    nav_contact: "Contacto",
-
-    title: "Esteban Méndez <br><span>Cloud Engineer</span>",
-    description: "Diseño y despliego infraestructura en Azure usando Infrastructure as Code (Terraform), enfocada en entornos seguros, escalables y listos para producción.",
-    stack: "Azure · Terraform · Automatización · Linux",
-    btn_projects: "Ver proyectos",
-
-    about_title: "Sobre mí",
-    about_1: "Técnico de sistemas con experiencia en entornos Linux y operación de infraestructura, actualmente en transición hacia Cloud Engineering.",
-    about_2: "Especializado en construir infraestructura en Azure usando Terraform, aplicando buenas prácticas en redes, seguridad y optimización de costes.",
-    about_3: "Desarrollo proyectos reales diseñando y automatizando entornos cloud con redes, máquinas virtuales, monitorización y backups.",
-
-    exp_title: "Experiencia",
-    exp_role_1: "Administrador de Sistemas – Martinrea International",
-    exp_desc_1: "Operación de infraestructura IT en entorno industrial, incluyendo monitorización, gestión de incidencias y coordinación con proveedores. Soporte en entornos híbridos y participación en migración de Active Directory a Microsoft Entra ID.",
-    exp_tech_1: "Azure · Linux · Networking · Monitorización · IT Operations",
-
-    exp_role_2: "Soporte IT – Santander Global Tech",
-    exp_desc_2: "Soporte técnico de primer nivel en entorno enterprise usando ServiceNow. Resolución de incidencias, troubleshooting y escalado siguiendo procesos ITSM.",
-    exp_tech_2: "ServiceNow · ITSM · Soporte L1 · Windows",
-
-    exp_role_3: "Técnico de Sistemas – Hosting",
-    exp_desc_3: "Administración de servidores Linux en entornos de hosting, incluyendo troubleshooting, soporte y gestión básica de red.",
-    exp_tech_3: "Linux · Apache · Networking · Hosting",
-
-    projects_title: "Proyectos",
-    contact_title: "Contacto",
-
-    p1: "Provisionado de infraestructura en Azure usando Terraform (VNet, subnets, NSG, VM) siguiendo buenas prácticas de seguridad y escalabilidad.",
-    p2: "Script orientado a FinOps para detectar y eliminar recursos huérfanos en Azure, optimizando costes cloud.",
-    p3: "Automatización de backups a Azure Blob Storage usando AzCopy, simulando escenarios reales de protección de datos.",
-    p4: "Automatización de despliegue de contenedores Docker en Linux con configuración reproducible.",
-    p5: "Hardening de Linux incluyendo firewall, protección SSH y Fail2Ban para mejorar la seguridad del sistema.",
-    p6: "Monitorización de CPU, RAM y disco para detección temprana de problemas de rendimiento."
-  },
-
-  en: {
-    nav_about: "About",
-    nav_experience: "Experience",
-    nav_projects: "Projects",
-    nav_contact: "Contact",
-
-    title: "Esteban Méndez <br><span>Cloud Engineer</span>",
-    description: "I design and deploy Azure infrastructure using Infrastructure as Code (Terraform), focusing on secure, scalable, and production-ready environments.",
-    stack: "Azure · Terraform · Automation · Linux",
-    btn_projects: "View projects",
-
-    about_title: "About me",
-    about_1: "Systems technician with experience in Linux environments and infrastructure operations, currently transitioning into Cloud Engineering.",
-    about_2: "Specialized in building Azure infrastructure using Terraform, applying best practices in networking, security, and cost optimization.",
-    about_3: "I build real-world projects designing and automating cloud environments including networking, virtual machines, monitoring, and backups.",
-
-    exp_title: "Experience",
-    exp_role_1: "Systems Administrator – Martinrea International",
-    exp_desc_1: "IT infrastructure operations in an industrial environment, including monitoring, incident management, and vendor coordination. Supported hybrid environments and participated in Active Directory to Microsoft Entra ID migration.",
-    exp_tech_1: "Azure · Linux · Networking · Monitoring · IT Operations",
-
-    exp_role_2: "IT Support – Santander Global Tech",
-    exp_desc_2: "Provided first-line technical support in enterprise environments using ServiceNow. Incident resolution, troubleshooting, and escalation following ITSM processes.",
-    exp_tech_2: "ServiceNow · ITSM · L1 Support · Windows",
-
-    exp_role_3: "Systems Technician – Hosting",
-    exp_desc_3: "Managed Linux-based hosting environments, including server administration, troubleshooting, and basic networking.",
-    exp_tech_3: "Linux · Apache · Networking · Hosting",
-
-    projects_title: "Projects",
-    contact_title: "Contact",
-
-    p1: "Provisioned Azure infrastructure using Terraform (VNet, subnets, NSG, VM) following best practices for security and scalability.",
-    p2: "FinOps-oriented script to identify and remove orphan Azure resources, reducing cloud costs.",
-    p3: "Automated backups to Azure Blob Storage using AzCopy, simulating real-world data protection scenarios.",
-    p4: "Automated Docker container deployment on Linux with reproducible configuration.",
-    p5: "Implemented Linux hardening including firewall, SSH protection, and Fail2Ban.",
-    p6: "System monitoring (CPU, RAM, disk) to detect performance issues early."
-  }
-};
-
-function setLang(lang) {
-  document.documentElement.lang = lang;
-
-  document.querySelectorAll("[data-i18n]").forEach(el => {
-    const key = el.dataset.i18n;
-    if (translations[lang][key]) {
-      el.innerHTML = translations[lang][key];
-    }
-  });
-
-  localStorage.setItem("lang", lang);
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-  const savedLang = localStorage.getItem("lang") || "es";
-  setLang(savedLang);
-});
-</script>
 
 </body>
 </html>
