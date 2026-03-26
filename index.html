@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Esteban Méndez | Cloud Engineer</title>
+
 <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -14,11 +15,11 @@
     <div class="logo">estebanmndz</div>
 
     <div class="menu">
-      <a href="#about">Sobre mí</a>
+      <a href="#about" data-i18n="nav_about">Sobre mí</a>
       <a href="#skills">Skills</a>
-      <a href="#experience">Experiencia</a>
-      <a href="#projects">Proyectos</a>
-      <a href="#contact">Contacto</a>
+      <a href="#experience" data-i18n="nav_experience">Experiencia</a>
+      <a href="#projects" data-i18n="nav_projects">Proyectos</a>
+      <a href="#contact" data-i18n="nav_contact">Contacto</a>
     </div>
 
     <div class="lang-switch">
@@ -30,76 +31,142 @@
 
 <section class="hero">
   <div class="container">
-    <h1>
+
+    <h1 data-i18n="title">
       Esteban Méndez <br>
       <span>Cloud Engineer</span>
     </h1>
 
-    <p class="highlight">Azure · Terraform · Automatización · Linux</p>
-    <p class="description">
-      Diseño y despliego infraestructura en Azure usando Infrastructure as Code (Terraform),
-      enfocada en entornos seguros, escalables y listos para producción.
-    </p>
+    <p class="highlight" data-i18n="stack"></p>
+    <p class="description" data-i18n="description"></p>
 
     <div class="buttons">
       <a href="https://github.com/estebanmndz" target="_blank" class="btn">GitHub</a>
-      <a href="#projects" class="btn secondary">Ver proyectos</a>
+      <a href="#projects" class="btn secondary" data-i18n="btn_projects"></a>
+    </div>
+
+  </div>
+</section>
+
+<section id="about">
+  <div class="container">
+    <h2 data-i18n="about_title"></h2>
+    <p data-i18n="about_1"></p>
+    <p data-i18n="about_2"></p>
+    <p data-i18n="about_3"></p>
+
+    <p style="margin-top:15px; color:#38bdf8;">
+      Azure · Terraform · PowerShell · Bash · Linux · Docker · Networking
+    </p>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="container">
+    <h2>Skills</h2>
+
+    <div class="skills-grid">
+      <div><h4>Cloud</h4><p>Microsoft Azure</p></div>
+      <div><h4>Infrastructure as Code</h4><p>Terraform</p></div>
+      <div><h4>Operating Systems</h4><p>Linux</p></div>
+      <div><h4>Containers</h4><p>Docker</p></div>
+      <div><h4>Networking</h4><p>VNets · Subnets · NSG</p></div>
+      <div><h4>Monitoring</h4><p>System monitoring · Logs</p></div>
+      <div><h4>Other</h4><p>Git · Bash · ServiceNow</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="container">
+
+    <h2 data-i18n="exp_title"></h2>
+
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <div class="timeline-date">2023 - Actualidad</div>
+        <div class="timeline-content">
+          <h3 data-i18n="exp_role_1"></h3>
+          <p data-i18n="exp_desc_1"></p>
+          <p class="timeline-tech" data-i18n="exp_tech_1"></p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">2021 - 2023</div>
+        <div class="timeline-content">
+          <h3 data-i18n="exp_role_2"></h3>
+          <p data-i18n="exp_desc_2"></p>
+          <p class="timeline-tech" data-i18n="exp_tech_2"></p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-date">2020 - 2021</div>
+        <div class="timeline-content">
+          <h3 data-i18n="exp_role_3"></h3>
+          <p data-i18n="exp_desc_3"></p>
+          <p class="timeline-tech" data-i18n="exp_tech_3"></p>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
 
 <section id="projects">
   <div class="container">
-    <h2>Proyectos</h2>
+    <h2 data-i18n="projects_title"></h2>
 
     <div class="grid">
 
       <a href="https://github.com/estebanmndz/terraform-azure-vm" target="_blank" class="card">
         <span class="tag">IaC</span>
         <h3>Azure Infrastructure (Terraform)</h3>
-        <p>Provisionamiento de infraestructura en Azure mediante Terraform (IaC), incluyendo red, seguridad y máquina virtual, con despliegues reproducibles e idempotentes.</p>
+        <p data-i18n="p0"></p>
       </a>
 
       <a href="https://github.com/estebanmndz/azure-create-vm" target="_blank" class="card">
         <span class="tag">Azure</span>
         <h3>Azure VM Deployment</h3>
-        <p>Provisionado de infraestructura en Azure usando PowerShell (VNet, subnets, NSG, VM) siguiendo buenas prácticas de seguridad y escalabilidad.</p>
+        <p data-i18n="p1"></p>
       </a>
 
       <a href="https://github.com/estebanmndz/azure-ad-user-import" target="_blank" class="card">
         <span class="tag">Identity</span>
         <h3>Azure AD User Import</h3>
-        <p>Provisionamiento masivo de usuarios en Azure AD usando Microsoft Graph con validación, control de duplicados y manejo de errores.</p>
+        <p data-i18n="p7"></p>
       </a>
 
       <a href="https://github.com/estebanmndz/azure-clean-orphans" target="_blank" class="card">
         <span class="tag">FinOps</span>
         <h3>Orphan Resource Cleaner</h3>
-        <p>Script orientado a FinOps para detectar y eliminar recursos huérfanos en Azure, optimizando costes cloud.</p>
+        <p data-i18n="p2"></p>
       </a>
 
       <a href="https://github.com/estebanmndz/azure-backup-blob" target="_blank" class="card">
         <span class="tag">Storage</span>
         <h3>Backup a Azure Blob</h3>
-        <p>Automatización de backups a Azure Blob Storage usando AzCopy, simulando escenarios reales de protección de datos.</p>
+        <p data-i18n="p3"></p>
       </a>
 
       <a href="https://github.com/estebanmndz/docker-autodeploy" target="_blank" class="card">
         <span class="tag">Docker</span>
         <h3>Docker Auto Deploy</h3>
-        <p>Automatización de despliegue de contenedores Docker en Linux con configuración reproducible.</p>
+        <p data-i18n="p4"></p>
       </a>
 
       <a href="https://github.com/estebanmndz/linux-hardening" target="_blank" class="card">
         <span class="tag">Security</span>
         <h3>Linux Hardening</h3>
-        <p>Hardening de Linux incluyendo firewall, protección SSH y Fail2Ban para mejorar la seguridad del sistema.</p>
+        <p data-i18n="p5"></p>
       </a>
 
       <a href="https://github.com/estebanmndz/linux-monitoring" target="_blank" class="card">
         <span class="tag">Monitoring</span>
         <h3>Linux Monitoring</h3>
-        <p>Monitorización de CPU, RAM y disco para detección temprana de problemas de rendimiento.</p>
+        <p data-i18n="p6"></p>
       </a>
 
     </div>
@@ -108,7 +175,8 @@
 
 <section id="contact">
   <div class="container contact-box">
-    <h2>Contacto</h2>
+    <h2 data-i18n="contact_title"></h2>
+
     <p>📧 <a href="mailto:mendezesteban1804@gmail.com">mendezesteban1804@gmail.com</a></p>
     <p>💻 <a href="https://github.com/estebanmndz" target="_blank">github.com/estebanmndz</a></p>
   </div>
@@ -117,6 +185,15 @@
 <footer>
   © 2026 Esteban Méndez · Cloud Engineer
 </footer>
+
+<script>
+/* SOLO AÑADE ESTAS DOS NUEVAS CLAVES */
+translations.es.p0 = "Provisionamiento de infraestructura en Azure mediante Terraform (IaC), incluyendo red, seguridad y máquina virtual, con despliegues reproducibles e idempotentes.";
+translations.es.p7 = "Provisionamiento masivo de usuarios en Azure AD usando Microsoft Graph con validación, control de duplicados y manejo de errores.";
+
+translations.en.p0 = "Provisioning Azure infrastructure using Terraform (IaC), including networking, security and virtual machine, with reproducible and idempotent deployments.";
+translations.en.p7 = "Bulk user provisioning in Azure AD using Microsoft Graph with validation, duplicate detection and error handling.";
+</script>
 
 </body>
 </html>
